@@ -2,7 +2,7 @@
 AI-Powered Movie Plot Generator using Gemini & ML
 This project is an AI-driven movie story generator that combines Google Gemini's generative text capabilities with machine learning-based data cleaning and analysis to create original movie plotlines based on successful trends from real-world datasets.
 
-#Overview
+# Overview
 Using a dataset of movies (including IMDb scores, Rotten Tomatoes ratings, Box Office earnings, and summaries), this tool:
 
 Cleans and imputes missing values using advanced techniques like Random Forest-based prediction.
@@ -19,7 +19,7 @@ Cleans and imputes missing values using advanced techniques like Random Forest-b
 
 -“Generate a romantic drama that performs well at the box office and IMDb.”
 
-#Dependencies
+# Dependencies
 Install required libraries before running the script:
 
 bash
@@ -37,37 +37,37 @@ google-generativeai: Access to Gemini text generation
 
 re, textwrap, os: Utilities
 
-#Dataset
+# Dataset
 File: netflix-rotten-tomatoes-metacritic-imdb.csv
 
-#Expected Columns: Should include Genre, Boxoffice, IMDb Score, Rotten Tomatoes Score, Metacritic Score, Awards Received, and a Movie Summary column (case-insensitive match).
+# Expected Columns: Should include Genre, Boxoffice, IMDb Score, Rotten Tomatoes Score, Metacritic Score, Awards Received, and a Movie Summary column (case-insensitive match).
 
 If the file is missing, the script will raise an error. Upload it via Colab or ensure it exists locally.
 
-#How It Works
-#Data Cleaning
+# How It Works
+# Data Cleaning
 
 Converts dollar values to numeric
 
 Fills missing values using median imputation and RandomForest regressors
 
-#Prompt Handling
+# Prompt Handling
 
 Extracts the target genre and success metrics (IMDb score, Box Office, Awards) using Gemini
 
-#Data Filtering
+# Data Filtering
 
 Selects only the movies that match genre and success criteria
 
-#Theme Analysis
+# Theme Analysis
 
 Summarizes patterns from successful movie plots
 
-#Story Generation
+# Story Generation
 
 Constructs a brand-new plot based on the learned themes
 
-#How to Use
+# How to Use
 Enter your Gemini API Key when prompted.
 
 Provide a movie prompt, e.g.:
@@ -90,15 +90,15 @@ Edit
 Genre: Thriller
 Criteria: IMDb, Awards
 
-#Themes:
+# Themes:
 - Unreliable narrators
 - Psychological tension
 - Twist endings
 
-#Logline:
+# Logline:
 A disoriented detective discovers his past may hold the key to a string of chilling murders.
 
-#Synopsis:
+# Synopsis:
 Notes
 Works best with complete and clean datasets.
 
